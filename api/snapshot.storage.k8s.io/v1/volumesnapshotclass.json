@@ -36,8 +36,10 @@
     }
   },
   "required": [
-    "deletionPolicy",
-    "driver"
+    "apiVersion",
+    "kind",
+    "driver",
+    "deletionPolicy"
   ],
   "type": "object"
 }

@@ -134,5 +134,9 @@
       "type": "object"
     }
   },
-  "type": "object"
+  "type": "object",
+  "required": [
+    "apiVersion",
+    "kind"
+  ]
 }

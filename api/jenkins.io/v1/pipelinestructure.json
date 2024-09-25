@@ -305,8 +305,10 @@
     }
   },
   "required": [
-    "pipelineRef",
-    "pipelineRunRef"
+    "pipelineRunRef",
+    "kind",
+    "apiVersion",
+    "pipelineRef"
   ],
   "type": "object"
 }

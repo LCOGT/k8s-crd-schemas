@@ -293,6 +293,8 @@
     }
   },
   "required": [
+    "apiVersion",
+    "kind",
     "spec"
   ],
   "type": "object"

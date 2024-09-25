@@ -27,7 +27,9 @@
     }
   },
   "required": [
+    "apiVersion",
     "metadata",
+    "kind",
     "spec"
   ],
   "type": "object"

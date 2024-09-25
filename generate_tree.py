@@ -24,6 +24,10 @@ for crd in data.get("items", [data]):
       schema["properties"]["apiVersion"]["enum"] = ["%s/%s" % (group, vname)]
       schema["properties"]["kind"]["enum"] = ["%s" % spec["names"]["kind"]]
 
+      required = schema.get("required", [])
+      required.extend(["apiVersion", "kind"])
+      schema["required"] = list(set(required))
+
     path = Path("api", group,  vname,  "%s.json" % name)
 
     path.parent.mkdir(parents=True, exist_ok=True)

@@ -870,7 +870,9 @@
     }
   },
   "required": [
-    "metadata"
+    "apiVersion",
+    "metadata",
+    "kind"
   ],
   "type": "object"
 }
