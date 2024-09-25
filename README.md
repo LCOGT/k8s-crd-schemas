@@ -10,7 +10,7 @@ Enter devenv:
 nix develop --impure
 ```
 
-Pipe CRDs to genrate script:
+Pipe CRDs to generator script:
 
 ```shell
 kubectl get crds -o json | generate-tree
