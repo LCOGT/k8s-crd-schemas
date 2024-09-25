@@ -49,7 +49,7 @@
 
           scripts.generate-tree = {
             description = "Generate schema files using kubectl get crd -o json as input";
-            exec = builtins.readFile ./geneate_tree.py;
+            exec = builtins.readFile ./generate_tree.py;
             package = config.devenv.shells.default.languages.python.package;
           };
         };
