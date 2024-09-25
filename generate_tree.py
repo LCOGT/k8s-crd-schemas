@@ -12,11 +12,17 @@ for crd in data.get("items", [data]):
   for version in spec["versions"]:
     vname = version["name"]
 
+    gvk = "%s/%s/%s" % (group, vname, name)
+
     if "schema" not in version:
-      print("%s/%s/%s does not have a schema; skipping" % (group, vname, name))
+      print("%s does not have a schema; skipping" % gvk)
       continue
 
     schema = version["schema"]["openAPIV3Schema"]
+
+    if "properties" in schema:
+      schema["properties"]["apiVersion"]["enum"] = ["%s/%s" % (group, vname)]
+      schema["properties"]["kind"]["enum"] = ["%s" % spec["names"]["kind"]]
 
     path = Path("api", group,  vname,  "%s.json" % name)
 
