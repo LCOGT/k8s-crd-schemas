@@ -10,14 +10,15 @@ for crd in data.get("items", [data]):
   name = spec["names"]["singular"]
 
   for version in spec["versions"]:
+    vname = version["name"]
+
     if "schema" not in version:
-      print("%s/%s does not have schema; skipping" % (group, name))
+      print("%s/%s/%s does not have a schema; skipping" % (group, vname, name))
       continue
 
-    vname = version["name"]
     schema = version["schema"]["openAPIV3Schema"]
 
-    path = Path("api", group,  name,  "%s.json" % vname)
+    path = Path("api", group,  vname,  "%s.json" % name)
 
     path.parent.mkdir(parents=True, exist_ok=True)
 

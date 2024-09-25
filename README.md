@@ -16,4 +16,4 @@ Pipe CRDs to generator script:
 kubectl get crds -o json | generate-tree
 ```
 
-This will output schemas to `api/<API Group>/<kind name>/<version>.json`.
+This will output schemas to `api/<API group>/<version>/<kind name>.json`.
