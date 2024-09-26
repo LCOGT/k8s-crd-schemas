@@ -37,8 +37,8 @@
   },
   "required": [
     "apiVersion",
-    "driver",
     "deletionPolicy",
+    "driver",
     "kind"
   ],
   "type": "object"

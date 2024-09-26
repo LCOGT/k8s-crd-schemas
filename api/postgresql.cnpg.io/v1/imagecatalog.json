@@ -55,9 +55,9 @@
   },
   "required": [
     "apiVersion",
-    "spec",
+    "kind",
     "metadata",
-    "kind"
+    "spec"
   ],
   "type": "object"
 }
