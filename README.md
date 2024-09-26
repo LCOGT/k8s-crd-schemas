@@ -13,7 +13,7 @@ nix develop --impure
 Pipe CRDs to generator script:
 
 ```shell
-kubectl get crds -o json | generate-tree
+kubectl get crds -o json | generate-crd-schemas
 ```
 
 This will output schemas to `api/<API group>/<version>/<kind name>.json`.

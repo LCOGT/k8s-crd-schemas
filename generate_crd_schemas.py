@@ -26,7 +26,7 @@ for crd in data.get("items", [data]):
 
       required = schema.get("required", [])
       required.extend(["apiVersion", "kind"])
-      schema["required"] = list(set(required))
+      schema["required"] = sorted(list(set(required)))
 
     path = Path("api", group,  vname,  "%s.json" % name)
 

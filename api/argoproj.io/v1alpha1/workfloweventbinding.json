@@ -23,9 +23,9 @@
   },
   "required": [
     "apiVersion",
+    "spec",
     "metadata",
-    "kind",
-    "spec"
+    "kind"
   ],
   "type": "object"
 }

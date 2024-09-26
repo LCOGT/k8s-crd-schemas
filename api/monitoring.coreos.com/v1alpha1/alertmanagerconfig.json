@@ -4671,8 +4671,8 @@
   },
   "required": [
     "apiVersion",
-    "kind",
-    "spec"
+    "spec",
+    "kind"
   ],
   "type": "object"
 }

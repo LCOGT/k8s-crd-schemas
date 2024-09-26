@@ -871,8 +871,8 @@
   },
   "required": [
     "apiVersion",
-    "metadata",
-    "kind"
+    "kind",
+    "metadata"
   ],
   "type": "object"
 }

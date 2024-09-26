@@ -44,12 +44,13 @@
           languages.python.enable = true;
 
           enterShell = ''
-            echo "Generate using kubectl get crds -o json | generate-tree"
+            echo "Generate using:"
+            echo "kubectl get crds -o json | generate-crd-schemas"
           '';
 
-          scripts.generate-tree = {
+          scripts.generate-crd-schemas = {
             description = "Generate schema files using kubectl get crd -o json as input";
-            exec = builtins.readFile ./generate_tree.py;
+            exec = builtins.readFile ./generate_crd_schemas.py;
             package = config.devenv.shells.default.languages.python.package;
           };
         };
